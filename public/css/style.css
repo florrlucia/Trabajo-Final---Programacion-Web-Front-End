@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/*
+.montserrat-<uniquifier> {
+font-family: "Montserrat", sans-serif;
+font-optical-sizing: auto;
+font-weight: <weight>;
+font-style: normal;
+*/
+
+* {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    background-color: #000000;
+    height: 100vh;
+    h1{
+        font-size: 50px;
+    }
+    p{
+        font-size: 30px;
+    }
+}
+
+img {
+    border-radius: 20px;
+}
+  /* estilos header */
+header {
+    padding: 50px;
+    text-align: center;
+    background-image: url('../img/Inicio.jpg');
+    background-repeat:repeat;
+    background-size:contain;
+}
+header div {
+    padding: auto;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+
+}
+@media (max-width: 800px) {
+    header {
+    background-position: center;
+    }
+}
+  /* estilos navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+    position:relative;
+    top: 10;
+    z-index: 50;
+}
+.navbar a{
+    color: #FFF9EC;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+.navbar a:hover{
+    background-color: #ffffff;
+    color: #000000;
+}
+@media (max-width:800px) {
+.navbar {
+    flex-direction: column;
+    position: unset;
+}
+.navbar a {
+    text-align: center;
+}
+}
+/* estilo parte principal */
+.producto{
+    color: #ffffff;
+}
+.principal {
+    display: flex;
+    flex-wrap: wrap;
+}
+aside {
+    flex-basis: 25%;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 10px;
+}
+.QuienesSomos{
+    font-size: 20px;
+}
+main {
+    flex-basis: 75%;
+    background-color: #000000;
+    padding: 20px;
+    padding-left: 40px;
+}
+@media (max-width:800px) {
+    .principal {
+    flex-direction: column;
+    }
+}
+.UL{
+    display: flex;
+    align-content: space-around;
+}
+  /* estilos aside */
+.image img {
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+    transition: 0.5s all ease-in-out;
+}
+.producto:hover img{
+    transform: scale(1.07);
+}
+.asideTitle {
+    text-decoration: underline;
+}
+@media (max-width:800px) {
+    .image img {
+    width: 60%;
+    height: auto;
+    }
+}
+  /* estilos main */
+main h2 {
+    text-transform: uppercase;
+    margin-top: 10px;
+    color: #ffffff;
+    text-align: center;
+}
+main h5 {
+    text-align: right;
+}
+main p{
+    font-style: italic;
+}
+main img {
+    width: 100%;
+    object-fit: cover;
+}
+main .AgregarCarrito {
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    margin: auto;
+    text-align: center;
+    width: fit-content;
+}
+main .AgregarCarrito:hover {
+    background-color: #453e3e;
+    color: #ffffff;
+}
+.verMas {
+    display: block;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.verMas:hover{
+    background-color: #453e3e;
+    color: #ffffff;
+}
+  /* estilos footer */
+footer {
+    padding: 10px;
+    text-align: center;
+    background-color: black;
+    color: #ffffff;
+}
+  /* estilos formulario */
+form {
+    padding: 40px;
+    background-color: #000000;
+    color: #ffffff;
+    max-width: 600px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+legend {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.formulario {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #e0e0e0;
+}
+
+input[type="Texto"],
+input[type="Mail"],
+input[type="Contraseña"],
+input[type="Fecha"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+input[type="Registrarse"],
+input[type="Borrar"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 10px 5px;
+}
+
+input[type="Registrarse"] {
+    background-color: #4caf50;
+    color: #ffffff;
+}
+
+input[type="Borrar"] {
+    background-color: #f44336;
+    color: #ffffff;
+}
+
+input[type="Registrarse"]:hover,
+input[type="Borrar"]:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+    form {
+        padding: 20px;
+    }
+
+    .formulario {
+        margin-bottom: 15px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+.Contacto{
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 20px;
+    margin: auto;
+    text-align: center;
+    width: fit-content;
+}
+main .Contacto:hover {
+    background-color: #453e3e;
+    color: #ffffff;
+}
